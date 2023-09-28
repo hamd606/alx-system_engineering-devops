@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+# Displays a number from 1 to 100 in list format
+# if n%3 && n%5 it displays Fizzbuzz
+# if n%3 displays fizz and if n%5 dispolays buzz
+
+for i in {1..100}
+do
+  if (( i % 3 == 0 && i % 5 == 0 ))
+  then
+    echo "FizzBuzz"
+  elif (( i % 3 == 0 ))
+  then
+    echo "Fizz"
+  elif (( i % 5 == 0 ))
+  then
+    echo "Buzz"
+  else
+    echo "$i"
+  fi
+done
