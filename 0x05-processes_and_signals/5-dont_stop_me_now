@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# prints the current running processes
+
+kill "$(ps -x | pgrep -f beyond)"
