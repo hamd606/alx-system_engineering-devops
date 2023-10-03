@@ -1,0 +1,4 @@
+chmod u+x *.rb
+git add .
+git commit -m task-check
+git push
