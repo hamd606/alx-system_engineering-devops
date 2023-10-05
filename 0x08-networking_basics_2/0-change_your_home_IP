@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Changes the following IPs of the foolowing domain names
+# 8.8.8.8		facebook.com 
+# 127.0.0.2		localhost
+
+cp /etc/hosts ~/hosts.tmp
+echo "127.0.0.2    localhost" > ~/hosts.alter
+echo "8.8.8.8      facebook.com" >> ~/hosts.alter
+cp -f ~/hosts.tmp /etc/hosts
