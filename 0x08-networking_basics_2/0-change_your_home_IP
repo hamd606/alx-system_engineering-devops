@@ -4,6 +4,6 @@
 # 127.0.0.2		localhost
 
 cp /etc/hosts ~/hosts.tmp
-echo "127.0.0.2    localhost" > ~/hosts.alter
-echo "8.8.8.8      facebook.com" >> ~/hosts.alter
+echo "127.0.0.2    localhost" > ~/hosts.tmp
+echo "8.8.8.8      facebook.com" >> ~/hosts.tmp
 cp -f ~/hosts.tmp /etc/hosts
