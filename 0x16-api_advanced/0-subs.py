@@ -15,12 +15,12 @@ def number_of_subscribers(subreddit):
     in a subreddit.
     - If an unvalid subreddit, return 0.
     """
-    req = requests.get(
-        "https://www.reddit.com/r/{}/about.json".format(subreddit),
-        headers={"User-Agent": "Custom"},
-    )
 
-    if req.status_code == 200:
-        return req.json().get("data").get("subscribers")
-    else:
+    sub_info = requests.get("https://www.reddit.com/r/{}/about.json"
+                            .format(subreddit),
+                            headers={"User-Agent": "My-User-Agent"},
+                            allow_redirects=False)
+    if sub_info.status_code >= 300:
         return 0
+
+    return sub_info.json().get("data").get("subscribers")
