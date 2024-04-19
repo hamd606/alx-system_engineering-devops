@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Script to reload Gunicorn configurations and restart workers
+
+pkill -HUP gunicorn
