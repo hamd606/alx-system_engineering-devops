@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# A script to start gunicorn service
 
 [Unit]
 Description=Gunicorn instance for 2-hbnb.py
